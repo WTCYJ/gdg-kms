@@ -1,0 +1,44 @@
+---
+title: GDG Korea Mobile Security
+eyebrow: Community
+lead: AND-LAB이 운영하는 모바일 보안 개발자 커뮤니티입니다.
+permalink: /
+---
+<section class="prose" style="margin-bottom:56px">
+  <blockquote class="warn">
+    <p>지금은 Google Developer Groups에 챕터 개설을 신청하는 단계입니다. 승인 전까지 행사는 AND-LAB 이름으로 엽니다.</p>
+  </blockquote>
+
+  <h2 id="about">어떤 모임인가요</h2>
+  <p>안드로이드 앱을 안전하게 만들고 싶은 개발자와, 직접 뜯어보며 보안을 배우고 싶은 학생이 함께하는 커뮤니티입니다. Android 앱 컴포넌트와 권한, 플랫폼과 커널, Firebase, Play Integrity처럼 Google 모바일 기술의 보안 쪽을 다룹니다.</p>
+  <p>GDG Korea Android가 앱 개발 전반을 다룬다면, 여기서는 보안만 봅니다. 개발자에게는 시큐어 코딩을, 보안을 공부하는 사람에게는 분석과 재현을 나눕니다.</p>
+
+  <h2>진행 방식</h2>
+  <ul>
+    <li>한 달에 한 번, 실습 위주 세션을 엽니다. 노트북과 에뮬레이터만 있으면 됩니다.</li>
+    <li>실습은 자기 기기, 의도적 취약 앱, 허가받은 대상에서만 합니다.</li>
+    <li>버그를 찾는 데서 끝내지 않고, 같은 버그를 자기 코드에서 막는 방법까지 다룹니다.</li>
+  </ul>
+</section>
+
+<div id="sessions"></div>
+{%- assign labels = "planned:준비 중인 세션,done:지난 세션" | split: "," -%}
+{%- for l in labels -%}
+  {%- assign kv = l | split: ":" -%}
+  {%- assign items = site.data.sessions | where: "status", kv[0] -%}
+  {%- if items.size > 0 -%}
+<section class="project-group">
+  <h2 class="group-title"><span class="status status-{{ kv[0] }}"></span>{{ kv[1] }} <span class="mono dim">{{ items.size }}</span></h2>
+  <ul class="project-grid">
+    {%- for s in items -%}
+    <li class="project-card">
+      <p class="mono dim">{% if s.date %}{{ s.date }}{% else %}일정 미정{% endif %}</p>
+      <h3>{% if s.link %}<a href="{{ s.link }}">{{ s.title }}</a>{% else %}{{ s.title }}{% endif %}</h3>
+      <p>{{ s.summary }}</p>
+      <ul class="chips">{% for t in s.tags %}<li>{{ t }}</li>{% endfor %}</ul>
+    </li>
+    {%- endfor -%}
+  </ul>
+</section>
+  {%- endif -%}
+{%- endfor -%}

@@ -1,0 +1,26 @@
+# GDG Korea Mobile Security 세션 목록. 적힌 순서대로 /gdg/ 에 나온다.
+# status: planned | done   (done 이면 date 와 link 를 채운다)
+- title: 킥오프 밋업
+  status: planned
+  summary: 안드로이드 앱 보안 지도. 컴포넌트, 인텐트, 저장소, 네트워크에서 자주 나오는 취약점을 한 번에 훑습니다.
+  tags: [Android, Intent, OWASP MASTG]
+- title: 취약 앱 핸즈온
+  status: planned
+  summary: 에뮬레이터와 adb, jadx로 AndroGoat, Allsafe를 직접 분석합니다.
+  tags: [adb, jadx, AndroGoat]
+- title: Frida 입문
+  status: planned
+  summary: 런타임 후킹으로 앱 동작을 들여다보고, 루팅 탐지와 SSL 피닝이 어떻게 돌아가는지 봅니다.
+  tags: [Frida, Root detection, SSL pinning]
+- title: Firebase 보안 규칙
+  status: planned
+  summary: Realtime Database, Firestore, Storage 규칙에서 자주 하는 실수와 점검 방법을 다룹니다.
+  tags: [Firebase, Firestore, Rules]
+- title: Play Integrity 설계
+  status: planned
+  summary: 앱 무결성 검증을 서버까지 어떻게 이어야 우회가 어려운지 다룹니다.
+  tags: [Play Integrity, Attestation]
+- title: 커널 보안 입문
+  status: planned
+  summary: 안드로이드 커널의 MTE, CFI 같은 방어 기법을 직접 빌드한 커널로 확인합니다.
+  tags: [Kernel, MTE, CFI]

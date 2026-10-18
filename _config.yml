@@ -1,0 +1,33 @@
+title: GDG Korea Mobile Security
+tagline: 모바일 보안 개발자 커뮤니티 · 운영 AND-LAB
+description: >-
+  Android 앱, 플랫폼, Firebase, Play Integrity까지 Google 모바일 기술의 보안을 실습으로 다루는 커뮤니티입니다.
+lang: ko
+
+# GitHub Actions(.github/workflows/pages.yml)가 baseurl 을 자동으로 넣어 준다.
+url: "https://wtcyj.github.io"
+baseurl: ""
+
+github: WTCYJ
+andlab: https://wtcyj.github.io/and-lab/   # 운영 단체 링크
+email: ""
+
+nav:
+  - { title: 소개, url: /#about }
+  - { title: 세션, url: /#sessions }
+
+markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+defaults:
+  - scope: { path: "" }
+    values: { layout: page }
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - serve.cmd
+  - README.md
